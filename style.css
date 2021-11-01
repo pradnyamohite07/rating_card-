@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+     background: #131419;
+}
+.wrapper{
+         background: rgb(46, 1, 27);
+         max-width: 360px;
+         width: 100%;
+         border-radius: 10px;
+         padding: 30px;
+         box-shadow: 5px 5px 8px rgb(255, 251, 24),-6px -6px 9px rgba(207, 8, 101, 0.966);
+}
+.wrapper .content{
+                 padding: 30px;
+                 display: flex;
+                 align-items: center;
+                 flex-direction: column;
+}
+.wrapper .outer{
+                 height: 135px;
+                 width: 135px;
+                 overflow: hidden;
+}
+input[type="radio"]{
+                     display: none;
+}
+.wrapper .emojis{
+                 height: 500%;
+                 display: flex;
+                 flex-direction: column;
+}
+.outer li{
+           height: 20%;
+           list-style: none;
+           width: 100%;
+           transition: all 0.3s ease;
+}
+
+#star-2:checked ~ .content .outer .slide{
+                                         margin-top: -135px;
+}
+#star-3:checked ~ .content .outer .slide{
+                                        margin-top: -270px;
+}
+#star-4:checked ~ .content .outer .slide{
+                                        margin-top: -405px;
+}
+#star-5:checked ~ .content .outer .slide{
+                                        margin-top: -540px;
+}
+.outer li span{
+                height: 100%;
+                width: 100%;
+                font-size: 5em;
+}
+.content .stars{
+                margin-top: 30px;
+}
+.stars label{
+              font-size: 30px;
+              margin: 0 3px;
+              color: #ccc;
+}
+#star-1:hover ~ .content .stars .stars-1,
+#star-1:checked ~ .content .stars .stars-1,
+  
+#star-2:hover ~ .content .stars .stars-1,
+#star-2:hover ~ .content .stars .stars-2,
+#star-2:checked ~ .content .stars .stars-1,
+#star-2:checked ~ .content .stars .stars-2,
+
+#star-3:hover ~ .content .stars .stars-1,
+#star-3:hover ~ .content .stars .stars-2,
+#star-3:hover ~ .content .stars .stars-3,
+#star-3:checked ~ .content .stars .stars-1,
+#star-3:checked ~ .content .stars .stars-2,
+#star-3:checked ~ .content .stars .stars-3,
+
+#star-4:hover ~ .content .stars .stars-1,
+#star-4:hover ~ .content .stars .stars-2,
+#star-4:hover ~ .content .stars .stars-3,
+#star-4:hover ~ .content .stars .stars-4,
+#star-4:checked ~ .content .stars .stars-1,
+#star-4:checked ~ .content .stars .stars-2,
+#star-4:checked ~ .content .stars .stars-3,
+#star-4:checked ~ .content .stars .stars-4,
+
+#star-5:hover ~ .content .stars .stars-1,
+#star-5:hover ~ .content .stars .stars-2,
+#star-5:hover ~ .content .stars .stars-3,
+#star-5:hover ~ .content .stars .stars-4,
+#star-5:hover ~ .content .stars .stars-5,
+#star-5:checked ~ .content .stars .stars-1,
+#star-5:checked ~ .content .stars .stars-2,
+#star-5:checked ~ .content .stars .stars-3,
+#star-5:checked ~ .content .stars .stars-4,
+#star-5:checked ~ .content .stars .stars-5{
+    color:#fed151;
+}
+.footer{
+         height: 55px;
+         width: 100%;
+         background: #131419;
+         border-radius: 0 0 10px 10px;
+         display: flex;
+         padding: 0 20px;
+         align-items: center;
+         justify-content: space-between;
+         box-shadow: 2px 2px 2px 5px
+         rgba(0, 0, 0, 0.726),
+         -3px -3px 7px rgba(255, 255, 255, 0);
+}
+.footer span{
+              font-size: 17px;
+              font-weight: 400;
+              color: rgb(235, 219, 219);
+}
+.footer .text::before{
+                      content: "Rate your experience";
+}
+.footer .numb::before{
+                      content: "0 out of 5";
+}
+#star-1:checked ~ .footer .text::before{
+        content: "Very Bad";
+}
+#star-1:checked ~ .footer .numb::before{
+       content: "⭐";
+}
+#star-2:checked ~ .footer .text::before{
+    content: "Not Bad";
+}
+#star-2:checked ~ .footer .numb::before{
+    content: "⭐⭐";
+}
+#star-3:checked ~ .footer .text::before{
+    content: "Good";
+}
+#star-3:checked ~ .footer .numb::before{
+    content: "⭐⭐⭐";
+}
+#star-4:checked ~ .footer .text::before{
+    content: "Very Good";
+}
+#star-4:checked ~ .footer .numb::before{
+    content: "⭐⭐⭐⭐";
+}
+#star-5:checked ~ .footer .text::before{
+    content: "Excellent";
+}
+#star-5:checked ~ .footer .numb::before{
+    content: "⭐⭐⭐⭐⭐";
+}
+
